@@ -21,7 +21,8 @@ export default {
     bottom: 0;
 
     /* 添加阴影 属性: x值 y值 模糊程度 颜色*/
-    box-shadow: 0px -1px 1px rgba(100,100,100,0.1);
+    border-top: 1px solid rgba(100, 100, 100, .1);
+    box-shadow: 0px -1px 1px rgba(100,100,100, .1);
   }
   
 </style>

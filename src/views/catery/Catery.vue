@@ -58,10 +58,17 @@ export default {
     crated() {},
     /* 模板已经加载完成 */
     mounted() {
-        console.log(this.$refs.aaa);
-        console.log(document.querySelector('.wrapper'));
+        /* console.log(this.$refs.aaa);
+        console.log(document.querySelector('.wrapper')); */
         this.scroll = new BScroll(document.querySelector('.wrapper'),{
-
+            probeType: 3,
+            pullUpLoad: true
+        })
+        this.scroll.on('scroll',(position) => {
+            //console.log(position);
+        })
+        this.scroll.on('pullingUp',() => {
+            //console.log('上拉加载更多');
         })
     }
 }

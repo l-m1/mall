@@ -4,7 +4,8 @@ import VueRouter from 'vue-router'
 const Home = () => import('views/home/Home.vue')
 const Catery = () => import('views/catery/Catery.vue')
 const Cart = () => import('views/cart/Cart.vue')
-const Proofile = () => import('views/profile/Profile.vue')
+const Profile = () => import('views/profile/Profile.vue')
+const Detail = () => import('views/detail/Detail.vue')
 
 Vue.use(VueRouter)
 
@@ -27,7 +28,11 @@ const routes = [
     },
     {
         path: '/profile',
-        component: Proofile
+        component: Profile
+    },
+    {
+        path: '/detail/:iid',
+        component: Detail
     } 
 ]
 const router = new VueRouter({
