@@ -144,6 +144,7 @@ export default {
         /* 网络请求的数据方法 */
         getHomeMultidata() {
             getHomeMultidata().then(res => {
+                //console.log(res);
                 this.banners = res.data.banner.list;
                 this.recommends = res.data.recommend.list;
         })
